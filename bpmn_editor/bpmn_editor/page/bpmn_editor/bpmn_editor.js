@@ -117,7 +117,7 @@ bpmn.Editor = Class.extend({
 			frappe.throw(msg.message);
 		} else {
 			frappe.confirm(
-				format(__('Do you want save the diagram {0}'),[this.diagram.$input.val()]),
+				'Do you want save the diagram?',
 				function(){
 					frappe.call({
 						'method': 'bpmn_editor.bpmn_editor.page.bpmn_editor.bpmn_editor.update_fields',
